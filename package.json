@@ -26,7 +26,7 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "start:client": "webpack-dev-server --open --mode development start",
+    "start:client": "react-scripts start",
     "start:server": "nodemon ./server",
     "build": "react-scripts build",
     "test": "react-scripts test",
