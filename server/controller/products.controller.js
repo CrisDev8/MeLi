@@ -13,13 +13,12 @@ const productDetail = require("../models/products.detail");
 
 // Obtener productos por query
 async function getProductsByQuery(req, res) {
-
     const url = `https://api.mercadolibre.com/sites/MLA/search?q=${req.query.item}&limit=4`;
 
     const data = await fetch(url).then(res => res.json()).then(json => {
         return json
     });
-
+    
     const modelConvert = products(data);
 
     return res.status(200).send(modelConvert);

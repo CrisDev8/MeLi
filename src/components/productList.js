@@ -4,13 +4,12 @@ import Products from './products'
 const ProductList = ({ results }) => {
 
     let data = []
-    console.log("LOS RESULTADOS SON", results);
 
     if (results.items) {
         data = results.items;
     }
     return (
-        <div>
+        <div className="products__container">
             {data.map((item) => (
                 <Products key={item.id} data={item} ></Products>
             ))}

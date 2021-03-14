@@ -1,0 +1,19 @@
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    color: #999;
+}
+
+.MuiIconButton-root {
+    border-radius: 0 4px 4px 0 !important;
+    background-color: #eee !important;
+}
+
+.generic {
+    &__container {
+        height: 100%;
+        padding-bottom: 50px;
+    }
+}

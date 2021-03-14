@@ -15,7 +15,8 @@ module.exports = data => {
             decimals,
             thumbnail,
             condition,
-            shipping
+            shipping,
+            address,
         }) => ({
             id,
             title,
@@ -26,7 +27,8 @@ module.exports = data => {
             },
             picture: thumbnail,
             condition,
-            free_shipping: shipping.free_shipping
+            free_shipping: shipping.free_shipping,
+            address: address.state_name
         })
     )
     // Formando objeto para categorias
@@ -41,7 +43,9 @@ module.exports = data => {
 
 // Metodo para extraer las categorias de los productos
 function getCategories(data) {
-    return data.filters[0].values[0].path_from_root.map(res => {
-        return res.name
-    })
+    if (data.filters.length !== 0) {
+        return data.filters[0].values[0].path_from_root.map(res => {
+            return res.name
+        })
+    }
 }
