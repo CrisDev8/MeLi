@@ -2,7 +2,7 @@
 
 Inicio del proyecto 
 
-Cliente: npm run start:client.
+Cliente: npm run start:client
 
 Servidor npm run start:server
 
