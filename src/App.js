@@ -64,7 +64,9 @@ function App() {
             <ProductList results={resultsState} />
           </Route>
           <Route path="/" exact>
-            Inicio
+            <div className="generic__author">
+              Cristian Silva - Test Front End Mercado Libre
+            </div>
           </Route>
 
         </Switch>
